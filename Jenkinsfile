@@ -1,11 +1,11 @@
 pipeline {
     agent { label 'worker1' }
 
-    environment {
+    //environment {
         // Define the environment variables for GIT_BRANCH and GIT_COMMIT
-        GIT_BRANCH = ''
-        GIT_COMMIT = ''
-    }
+        //GIT_BRANCH = ''
+        //GIT_COMMIT = ''
+    //}
 
     stages {
         stage('Checkout') {
@@ -15,8 +15,8 @@ pipeline {
                     checkout scm
                     
                     // Get the current GIT_BRANCH and GIT_COMMIT
-                    GIT_BRANCH = env.GIT_BRANCH
-                    GIT_COMMIT = env.GIT_COMMIT
+                    //GIT_BRANCH = env.GIT_BRANCH
+                    //GIT_COMMIT = env.GIT_COMMIT
                 }
             }
         }
